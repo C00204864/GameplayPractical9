@@ -1,0 +1,18 @@
+#version 400
+in vec4 color;
+out vec4 fColor;
+void main() {
+	if(mod(gl_FragCoord.y, 50.0) < 0.9)
+	{
+		fColor = vec4(1.0f, 0.0f, 0.0f, 0.0f);	
+	}
+	else if(mod(gl_FragCoord.x, 50.0) < 0.9)
+	{
+		fColor = vec4(1.0f, 0.0f, 0.0f, 0.0f);	
+	}
+	else 
+	{
+		fColor = color + vec4(0.0f, 0.0f, 1.0f, 0.0f);
+	}
+	//fColor = color + vec4(1.0f, 0.0f, 0.0f, 0.0f);
+}
